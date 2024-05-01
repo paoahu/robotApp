@@ -1,0 +1,1175 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .form {
+    @apply flex flex-col max-w-[240px] gap-[5px];
+    margin-bottom: 5px;
+  }
+
+  .label {
+    @apply font-bold text-blue-900;
+  }
+
+
+
+
+  .input,
+  input {
+    @apply border-[2px] border-solid border-blue-900 p-[5px] focus:border-green-600 focus:ring focus:ring-green-300 text-black;
+  }
+
+
+
+
+  .button {
+    @apply relative inline-block border-green-400 font-bold text-white bg-green-400 hover:bg-green-600 cursor-pointer;
+    padding: 10px 20px;
+
+
+
+
+    clip-path: polygon(30% 0,
+        /* top left */
+        70% 0,
+        /* top right */
+        80% 20%,
+        /* right top */
+        80% 80%,
+        /* right bottom */
+        70% 100%,
+        /* bottom right */
+        30% 100%,
+        /* bottom left */
+        20% 80%,
+        /* left bottom */
+        20% 20%
+        /* left top */
+      );
+    transition: background-color 250ms;
+  }
+
+  .button:hover {
+    @apply bg-blue-900;
+  }
+
+  .link {
+    @apply decoration-[none] text-green-700 hover:text-green-800 before:content-['[_'] after:content-['_]'];
+  }
+
+  .link:hover {
+    @apply text-blue-900;
+  }
+
+  .container {
+    @apply flex flex-col items-center gap-[1rem] p-[1rem];
+  }
+
+  .container--horizontal {
+    @apply flex-row justify-center;
+  }
+
+  .header {
+    @apply flex items-center justify-between p-[.5rem] bg-green-400 text-white;
+  }
+
+  .new-post,
+  .tutorial {
+    @apply mb-[1rem] bg-green-50 border border-green-200;
+  }
+
+  .post {
+    @apply flex flex-col items-center pb-[2rem] bg-green-50;
+  }
+
+  .post-image {
+    @apply max-w-[220px];
+  }
+
+  .post-actions {
+    @apply flex justify-between gap-[.5rem] mt-[.5rem];
+  }
+
+  .posts {
+    @apply mb-[3rem] md:grid md:grid-cols-2 lg:grid-cols-3 gap-[1rem];
+  }
+
+  .footer {
+    @apply bg-green-500 flex flex-col justify-center items-center fixed bottom-0 w-full min-h-[3rem] text-white;
+  }
+
+  /* LOGIN */
+
+  .h1-robotic {
+    @apply font-press-start;
+  }
+
+  .button-login {
+    margin-top: 10px;
+  }
+
+
+
+
+  .login-wrapper {
+    @apply max-w-sm w-full m-auto;
+    @apply md:max-w-md lg:max-w-lg;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+
+  }
+
+  .custom-header {
+    @apply bg-green-400 rounded-t-lg text-white py-4 px-6 flex justify-center items-center relative;
+    width: auto;
+
+    height: 100px;
+
+
+
+  }
+
+  .custom-header::before,
+  .custom-header::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    background-color: black;
+    border-radius: 60%;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  }
+
+  .custom-header::before {
+    left: 105px;
+
+  }
+
+  .custom-header::after {
+    right: 105px;
+
+  }
+
+
+
+  .login-container {
+    @apply bg-white shadow-md rounded-b-lg border-4 border-green-400;
+
+    @apply h-[700px];
+    @apply bg-zinc-50;
+
+  }
+
+
+  /* REGISTER */
+
+  .register-wrapper {
+    @apply max-w-sm w-full m-auto;
+    @apply md:max-w-md lg:max-w-lg;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+
+  }
+
+  .register-container {
+    @apply bg-white shadow-md rounded-b-lg border-4 border-green-400;
+
+    @apply h-[700px];
+    @apply bg-zinc-50;
+
+  }
+
+
+  /* HOME */
+  .home-wrapper {
+    @apply max-w-sm w-full m-auto;
+    @apply md:max-w-md lg:max-w-lg;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+
+  }
+
+  .home-container {
+    @apply bg-white shadow-md rounded-b-lg border-4 border-green-400;
+
+    @apply h-[700px];
+    @apply bg-zinc-50;
+
+
+  }
+
+  .h2-robotic {
+    @apply text-center font-press-start text-sm;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .home-button-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+
+  }
+
+  .home-connect-button {
+
+    @apply relative inline-block border-blue-900 font-bold text-white bg-blue-900 hover:bg-green-400 cursor-pointer;
+    padding: 10px 20px;
+
+    transition: background-color 250ms;
+  }
+
+
+
+  .home-tutorials-button {
+
+    @apply relative inline-block border-blue-900 font-bold text-white bg-blue-900 hover:bg-green-400 cursor-pointer;
+    padding: 10px 20px;
+
+
+
+
+    clip-path: polygon(30% 0,
+        /* top left */
+        70% 0,
+        /* top right */
+        80% 20%,
+        /* right top */
+        80% 80%,
+        /* right bottom */
+        70% 100%,
+        /* bottom right */
+        30% 100%,
+        /* bottom left */
+        20% 80%,
+        /* left bottom */
+        20% 20%
+        /* left top */
+      );
+    transition: background-color 250ms;
+  }
+
+  /* CONTROLLER*/
+
+
+
+  .controller-wrapper {}
+
+  .h2-robotic-controller {
+    @apply text-center font-press-start text-xs;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .controller-actions {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    grid-template-rows: repeat(3, auto);
+
+    gap: 10px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    @apply bg-zinc-200;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .button-forward,
+  .button-backward,
+  .button-left,
+  .button-right {
+    @apply relative inline-block font-bold text-white bg-blue-900 cursor-pointer;
+    padding: 10px;
+
+    width: 60px;
+
+    height: 60px;
+
+    transition: background-color 250ms;
+
+  }
+
+  .button-forward {
+    @apply bg-blue-900 hover:bg-green-400 cursor-pointer;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 5px;
+
+  }
+
+  .button-backward {
+    @apply bg-blue-900 hover:bg-green-400 cursor-pointer;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-bottom: 5px;
+  }
+
+  .button-right {
+    @apply bg-blue-900 hover:bg-green-400 cursor-pointer;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .button-left {
+    @apply bg-blue-900 hover:bg-green-400 cursor-pointer;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .button-stop {
+    @apply bg-green-400 hover:bg-red-600 cursor-pointer;
+
+    padding: 20px 20px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+
+  }
+
+  .comunication-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .button-sayHi {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+
+  }
+
+  .button-clearLCD {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .movement-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px;
+
+    padding: 5px;
+
+    margin-right: 6px;
+  }
+
+  .button-jump,
+  .button-snakeMove,
+  .button-moonwalker,
+  .button-crusaito,
+  .button-swing,
+  .button-upDown,
+  .button-kickLeft,
+  .button-noGravity,
+  .button-shakeLegRight,
+  .button-shakeLegLeft,
+  .button-endSequence,
+  .button-showSequence {
+    @apply text-xs;
+
+    padding: 5px 10px;
+
+    margin: 0;
+
+    min-width: 0;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+  }
+
+  .button-jump {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+
+  }
+
+  .button-snakeMove {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-moonwalker {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-crusaito {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+
+  .button-swing {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-upDown {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-kickLeft {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-noGravity {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-shakeLegRight {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+  }
+
+  .button-shakeLegLeft {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+  }
+
+  .button-endSequence {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+  }
+
+  .button-showSequence {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .sequences-popup {
+    @apply bg-zinc-400 shadow-md rounded-lg border-4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    @apply bg-zinc-200 text-blue-900;
+
+
+    @apply max-w-md m-auto p-4;
+
+    position: fixed;
+
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 20;
+
+    overflow-y: auto;
+
+    max-height: 90vh;
+
+    @apply h-[650px];
+  }
+
+  .edit-buttons {
+    @apply flex flex-row justify-around;
+
+
+    margin-top: 10px;
+
+  }
+
+  .button-playSequence {
+    @apply bg-green-400 text-white hover:bg-zinc-50 hover:text-blue-900 cursor-pointer;
+  }
+
+  .button-deleteSequence {
+    @apply bg-green-400 text-white hover:bg-zinc-50 hover:text-blue-900 cursor-pointer;
+  }
+
+  .button-editSequence {
+    @apply bg-green-400 text-white hover:bg-zinc-50 hover:text-blue-900 cursor-pointer;
+  }
+
+  .button-hideSequences {
+    @apply bg-green-400 text-white hover:bg-zinc-50 hover:text-blue-900 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+  }
+
+
+
+
+  .h1-robotic-controller {
+    @apply text-center font-press-start text-xs;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .button-deleteMovement {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+
+  }
+
+  .button-upMovement {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+
+  }
+
+  .button-downMovement {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .h3-robotic-controller {
+    @apply text-center font-press-start text-xs;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .edit-movements {
+    @apply flex flex-row justify-around;
+
+
+    margin-top: 5px;
+
+  }
+
+  .created-at {
+    @apply text-black;
+  }
+
+  .h5-movements {
+    @apply text-black;
+
+  }
+
+  .movements-list {
+
+    @apply text-blue-900 font-bold;
+  }
+
+  .button-finalDance {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 5px 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 15px;
+    margin-top: 5px;
+
+
+
+  }
+
+  .button-finalDance {
+    @apply bg-zinc-50;
+    background-image: url('/ottoParty1.png');
+
+    width: 33px;
+    /* Ajusta según el tamaño de tu imagen o como prefieras */
+    height: 34px;
+
+
+  }
+
+  .button-finalDance:hover {
+    background-image: url('/ottoParty2.png');
+    /* Cambia a la imagen de hover */
+  }
+
+
+
+  /* TUTORIALS */
+
+  .h3-robotic-tutorials {
+    @apply text-center font-press-start text-xs;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .tutorials-wrapper {
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: auto;
+    padding: 16px;
+
+    position: fixed;
+
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 20;
+
+    overflow-y: auto;
+
+    max-height: 90vh;
+
+    @apply h-[650px];
+    margin-top: 0px;
+    padding-top: 5px;
+
+  }
+
+
+  .tutorial {
+    @apply border-2 border-solid border-green-200 rounded-lg shadow-md p-4 mb-4 bg-green-50;
+
+  }
+
+  .button-addTutorial {
+    @apply bg-blue-900 hover:bg-green-400 cursor-pointer;
+
+
+  }
+
+  .button-likeTutorial,
+  .button-deleteTutorial,
+  .button-editTutorial {
+    padding: 2px 5px;
+
+    font-size: 12px;
+
+    height: auto;
+
+    min-height: 0;
+
+    min-width: 0;
+
+    line-height: 1;
+
+  }
+
+
+
+  .tutorial-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    font-size: 12px;
+
+    height: auto;
+
+    min-height: 0;
+
+    min-width: 0;
+
+    line-height: 1;
+
+  }
+
+  .tutorial-edition {
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+
+  }
+
+  .button-saveTutorial {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-cancelTutorial {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-likeTutorial {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+
+  }
+
+  .button-deleteTutorial {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+
+
+  .button-editTutorial {
+    @apply bg-blue-900 text-white hover:bg-green-400 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .container-new-post {
+    overflow-y: auto;
+    z-index: 20;
+
+
+
+  }
+
+  .container-new-post .label {
+    color: white;
+  }
+
+  .h2-robotic-new-tutorial {
+    @apply text-center font-press-start text-xs;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .footer {
+
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 70%;
+    margin: auto;
+    @apply bg-blue-900 text-white text-center py-2.5 rounded-lg;
+    overflow-y: auto;
+    z-index: 20;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+
+
+  }
+
+
+  /* PROFILE */
+
+  .h2-robotic-profile {
+    @apply text-center font-press-start text-lg text-blue-900;
+
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .h3-robotic-profile {
+    @apply text-center font-press-start text-xs text-green-400;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .changeProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+  .userData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    margin-bottom: 10px;
+    @apply text-green-400 font-bold;
+  }
+
+  .button-update {
+    @apply bg-green-400 text-white hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-changeEmail {
+    @apply bg-zinc-200 text-blue-900 hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .button-changePassword {
+    @apply bg-zinc-200 text-blue-900 hover:bg-blue-900 hover:text-zinc-50 cursor-pointer;
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: background-color 250ms, color 250ms;
+    margin-left: 10px;
+
+
+  }
+
+  .profile-container {
+    overflow-y: auto;
+
+    max-height: 90vh;
+
+    @apply h-[650px];
+  }
+
+  .h2-robotic-forum {
+    @apply text-center font-press-start text-lg text-blue-900;
+
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+
+
+
+  .Feedback {
+    @apply fixed top-0 w-full box-border text-white;
+    z-index: 20;
+
+    overflow-y: auto;
+  }
+
+  .Feedback--debug {
+    @apply bg-green-700;
+  }
+
+  .Feedback--info {
+    @apply bg-green-500;
+  }
+
+  .Feedback--warn {
+    @apply bg-yellow-400;
+  }
+
+  .Feedback--error {
+    @apply bg-orange-500;
+  }
+
+  .Feedback--fatal {
+    @apply bg-red-700;
+  }
+
+
+  /* Estilos para el popup */
+  .popup-container {
+    @apply fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10;
+  }
+
+  .popup {
+    @apply bg-green-500 p-4 rounded-lg shadow-lg text-white max-w-sm mx-auto;
+  }
+
+  .popup ul {
+    @apply list-none p-0;
+  }
+
+  .popup li {
+    @apply border-2 border-black p-2 rounded-md mb-2;
+  }
+}
